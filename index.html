@@ -23,9 +23,9 @@
 
     <script>
       function verificarCajaTexto() {
-        let texto = document.getElementById("cajaTexto").value;
+        const texto = document.getElementById("cajaTexto").value;
         if (texto === "") {
-          let mensaje = document.getElementById("mensaje");
+          const mensaje = document.getElementById("mensaje");
           mensaje.style.display = "block";
         } else {
           alert("Texto cargado: " + texto);
