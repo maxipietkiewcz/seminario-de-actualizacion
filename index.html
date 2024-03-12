@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #mensaje {
+        color: rgb(255, 0, 0);
+        background-color: yellow;
+        padding: 5px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Escriba lo que quiera...</h1>
+    <input type="text" id="cajaTexto" />
+    <br /><br />
+    <div id="mensaje">Cargue algo, por favor.</div>
+    <br /><br />
+    <button onclick="verificarCajaTexto()">Ejecutar</button>
+
+    <script>
+      function verificarCajaTexto() {
+        let texto = document.getElementById("cajaTexto").value;
+        if (texto === "") {
+          let mensaje = document.getElementById("mensaje");
+          mensaje.style.display = "block";
+        } else {
+          alert("Texto cargado: " + texto);
+          console.log("Texto cargado: " + texto);
+          mensaje.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
